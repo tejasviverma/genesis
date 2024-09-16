@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Animation */
+
+.animate-slide-diagonal {
+  animation: slideDiagonal 1.5s ease-out forwards;
+  opacity: 0;  /* Start hidden */
+}
+
+@keyframes slideDiagonal {
+  0% {
+    transform: translate(-100%, -100%) scale(0.5); /* From behind and small */
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) scale(1); /* End at the normal size */
+    opacity: 1;
+  }
+}
+
